@@ -1,0 +1,49 @@
+const modal = document.getElementById('modal');
+const openBtn = document.getElementById('openModalForm');
+const closeBtn = document.getElementById('closeModalBtn');
+const steps = document.querySelectorAll('.step');
+const nextBtns = document.querySelectorAll('.next-btn');
+const prevBtns = document.querySelectorAll('.prev-btn');
+const finishBtn = document.querySelector('.finish-btn');
+
+let currentStep = 0;
+
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+  showStep(currentStep);
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  currentStep = 0;
+});
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+  });
+}
+
+nextBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+});
+
+prevBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+});
+
+finishBtn.addEventListener('click', () => {
+  alert('Processo concluído!');
+  modal.style.display = 'none';
+  currentStep = 0;
+});
