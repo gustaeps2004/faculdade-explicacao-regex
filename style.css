@@ -49,6 +49,58 @@ body {
   display: block;
 }
 
+.modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-buttons-progress {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-buttons-regress {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.next-btn,
+.finish-btn,
+.prev-btn {
+  height: 35px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  font-size: 13px;
+  border-radius: 10px;
+  border: 1px solid #ffff;
+}
+
+.next-btn,
+.finish-btn {
+  background-color: #03A9F4;
+}
+
+.prev-btn {
+  background-color: #6B7280;
+}
+
+.prev-btn:hover {
+  transition: 0.3s;
+  background-color: #9E9E9E;
+}
+
+.next-btn:hover,
+.finish-btn:hover {
+  transition: 0.3s;
+  background-color: #036499;
+}
+
 button {
   padding: 10px 15px;
   margin-top: 15px;
