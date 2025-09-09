@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modal com Steps</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modals.css">
   <link rel="stylesheet" href="css/inputs.css">
   <link rel="icon" href="data:,">
 </head>
@@ -106,6 +107,53 @@
   </div>
 </div>
 
+<div id="modal-explicacao" class="modal-explicacao">
+  <div class="modal-content-explicacao">
+    <span class="close-btn-explicacao" id="closeModalBtnExplicacao">&times;</span>
+    
+    <div class="step-explicacao" id="stepExplicacao1">
+      <h1>GERAL</h1>
+      <p>CONTEUDO step 1</p>
+
+      <div class="modal-buttons">
+        <div class="modal-buttons-regress"></div>
+        <div class="modal-buttons-progress">
+          <button class="next-btn-explicacao">Próximo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-explicacao" id="stepExplicacao2">
+      <h1>GERAL</h1>
+      <p>CONTEUDO step 2</p>
+
+      <div class="modal-buttons">
+        <div class="modal-buttons-regress">
+          <button class="prev-btn-explicacao">Voltar</button>
+        </div>
+        <div class="modal-buttons-progress">
+          <button class="next-btn-explicacao">Próximo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-explicacao" id="stepExplicacao3">
+      <h1>GERAL</h1>
+      <p>CONTEUDO step 3</p>
+
+      <div class="modal-buttons">
+        <div class="modal-buttons-regress">
+          <button class="prev-btn-explicacao">Voltar</button>
+        </div>
+        <div class="modal-buttons-progress">
+          <button class="close-btn-explicacao-modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="./js/modalFormulario.js"></script>
+<script src="./js/modalExplicacao.js"></script>
 </body>
 </html>
