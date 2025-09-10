@@ -43,12 +43,15 @@ prevBtns.forEach(btn => {
 });
 
 finishBtn.addEventListener('click', () => {
+  if (!validarDadosEndereco())
+    return;
+    
   alert('Processo concluído!');
   modal.style.display = 'none';
   currentStep = 0;
 });
 
-function validarDadosEndereco(){
+function validarDadosEndereco() {
 
   const cep = document.getElementById('cep').value;
 
@@ -97,4 +100,6 @@ function validarDadosEndereco(){
     document.getElementById('estado').focus();
     return false;
   }
+
+  return true
 }
