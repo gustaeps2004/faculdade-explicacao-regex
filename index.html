@@ -134,12 +134,12 @@
       <h1>Principais símbolos</h1>
       <p>Os principais símbolos das expressões regulares incluem:</p>
       <ul> 
-        <li>O . (ponto), que corrensponde a qualquer caracter</li>
-        <li>O ^ (circunflexo), que fixa a correspondência no início da linha</li>
-        <li>O $ (cifrão), que a fixa no final</li>  
-        <li>Os [ ] (conchetes), que definem um conjunto de caracteres a serem encontrados</li>
-        <li>Os ( ) (parênteses), que agrupam padrões</li>
-        <li>A | (barra vertical), que indica uma alternativa</li>
+        <li>O . (ponto) corrensponde a qualquer caracter</li>
+        <li>O ^ (circunflexo) determina o início da string</li>
+        <li>O $ (cifrão) determina o final da string</li>  
+        <li>Os [ ] (conchetes) definem um conjunto de caracteres a serem encontrados</li>
+        <li>Os ( ) (parênteses) agrupam padrões</li>
+        <li>A | (barra vertical) indica uma alternativa</li>
       </ul>
       <p>Além disso, símbolos como:</p>
       <ul>
@@ -161,7 +161,29 @@
 
     <div class="step-explicacao" id="stepExplicacao3">
       <h1>Como utilizar - Validação</h1>
-      <p>CONTEUDO step 3</p>
+      <p>1°) Defina um objeto bem claro. Ex: Queremos apenas dígitos de 0-9</p>
+      <p>2°) Escolha a forma de representar esses caracteres:</p>
+      <ul>
+        <li>[0-9] → intervalo de 0 a 9 (ASCII)</li>
+        <li>\d → dígito (também pode pegar outros números Unicode em alguns engines, mas no JS normalmente é equivalente a [0-9])</li>
+      </ul>
+      <p>3°) Decida quantas vezes pode aparecer:</p>
+      <ul>
+        <li>+ → 1 ou mais vezes.</li>
+        <li>* → 0 ou mais vezes.</li>
+      </ul>
+      <p>4°) Delimite o início e o fim da string</p>
+      <ul>
+        <li>^ → começo da string</li>
+        <li>$ → final da string</li>
+      </ul>
+      <p>Segue o exemplo de como deve ser o resultado final:</p>
+      <br>
+      <div class="div-exemplo-apenas-numeros">
+        <img class="imagem-exemplo-apenas-numeros" src="./imgs/ApenasNumerosExemplo.png" alt="Ilustração a nível de aplicação">
+      </div>
+      <br>
+      <br>
 
       <div class="modal-buttons">
         <div class="modal-buttons-regress">
@@ -175,7 +197,32 @@
 
     <div class="step-explicacao" id="stepExplicacao4">
       <h1>Como utilizar - Formatação</h1>
-      <p>CONTEUDO step 4</p>
+      <p>1°) Defina qual o formato que deseja realizar. Ex: Formatar telefone</p>
+      <ul>
+        <li>Capturar os 11 dígitos (telefone com DDD + 9 dígitos)</li>
+        <li>Quebrar em grupos</li>
+        <ul>
+          <li>(\d{2}) → DDD</li>
+          <li>(\d{1}) → o primeiro dígito do número (9)</li>
+          <li>(\d{4}) → primeiros 4 dígitos</li>
+          <li>(\d{4}) → últimos 4 dígitos</li>
+        </ul>
+      </ul>
+      <p>2°) Montar a string com os grupos formatados</p>
+      <p>3°) No replace, usamos os grupos assim</p>
+      <ul>
+        <li>$1 → DDD</li>
+        <li>$2 → Primeiro dígito</li>
+        <li>$3 → Primeiros 4</li>
+        <li>$4 → Últimos 4</li>
+      </ul>
+      <p>Segue o exemplo de como deve ser o resultado final:</p>
+      <br>
+      <div class="div-exemplo-formatar-telefone">
+        <img class="imagem-exemplo-formatar-telefone" src="./imgs/FormatarTelefoneExemplo.png" alt="Ilustração a nível de aplicação">
+      </div>
+      <br>
+      <br>
 
       <div class="modal-buttons">
         <div class="modal-buttons-regress">
@@ -203,7 +250,30 @@
 
     <div class="step-explicacao" id="stepExplicacao6">
       <h1>Utilização em projetos reais</h1>
-      <p>ULTIMO</p>
+      <p>Será que o regex ou expressões regulares são utilizadas em projetos do mundo real?</p>
+      
+      <ul>
+        <li>Regex para deixar apenas números e letras</li>
+      </ul>
+      <div>
+        <img src="./imgs/ApenasNumerosLetras.png" alt="">
+      </div>
+
+      <ul>
+        <li>Regex para formatar documento federal</li>
+      </ul>
+      <div>
+        <img src="./imgs/FormatarDocumento.png" alt="">
+      </div>
+
+      <ul>
+        <li>Regex para formatar telefone</li>
+      </ul>
+      <div>
+        <img src="./imgs/FormatarTelefone.png" alt="">
+      </div>
+      <br>
+      <br>
 
       <div class="modal-buttons">
         <div class="modal-buttons-regress">
