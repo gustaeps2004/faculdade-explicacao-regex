@@ -26,7 +26,7 @@ function showStep(index) {
 
 nextBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    if (currentStep < steps.length - 1) {
+    if (currentStep < steps.length) {
       currentStep++;
       showStep(currentStep);
     }

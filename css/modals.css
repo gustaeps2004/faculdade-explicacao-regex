@@ -16,9 +16,11 @@
   background-color: #fff;
   margin: 10% auto;
   padding: 30px;
-  width: 400px;
+  width: 450px;
+  max-height: 45vh;
   position: relative;
   border-radius: 8px;
+  overflow-y: scroll;
 }
 
 .close-btn,

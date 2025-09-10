@@ -3,6 +3,13 @@ body {
   background-color: #38b6ff;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 #openModalForm {
   padding: 10px 20px;
   font-size: 16px;

@@ -14,10 +14,6 @@ function showStepExplicacao(index) {
   });
 }
 
-closeBtnExplicacao.addEventListener('click', () => {
-  closeModal()
-});
-
 openBtnExplicacao.addEventListener('click', () => {
   modalExplicacao.style.display = 'block';
   showStepExplicacao(currentStepExplicacao);
@@ -25,7 +21,7 @@ openBtnExplicacao.addEventListener('click', () => {
 
 nextBtnsExplicacao.forEach(btn => {
   btn.addEventListener('click', () => {
-    if (currentStepExplicacao < steps.length - 1) {
+    if (currentStepExplicacao < steps.length) {
       currentStepExplicacao++;
       showStepExplicacao(currentStepExplicacao);
     }
@@ -39,6 +35,10 @@ prevBtnsExplicacao.forEach(btn => {
       showStepExplicacao(currentStepExplicacao);
     }
   });
+});
+
+closeBtnExplicacao.addEventListener('click', () => {
+  closeModal()
 });
 
 closeBtnExplicacaoModal.addEventListener('click', () => {
