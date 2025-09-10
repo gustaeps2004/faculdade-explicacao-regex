@@ -21,10 +21,8 @@ openBtnExplicacao.addEventListener('click', () => {
 
 nextBtnsExplicacao.forEach(btn => {
   btn.addEventListener('click', () => {
-    if (currentStepExplicacao < steps.length) {
-      currentStepExplicacao++;
-      showStepExplicacao(currentStepExplicacao);
-    }
+    currentStepExplicacao++;
+    showStepExplicacao(currentStepExplicacao);
   });
 });
 
