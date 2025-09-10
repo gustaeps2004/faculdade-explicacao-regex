@@ -51,18 +51,25 @@ finishBtn.addEventListener('click', () => {
   currentStep = 0;
 });
 
-function validarDadosEndereco() {
+const cepInput = document.getElementById('cep');
+cepInput.addEventListener('input', function(e) {
+  let valor = e.target.value.replace(/\D/g, "");
+  if (valor.length > 5) {
+    valor = valor.replace(/(\d{5})(\d{1,3}).*/, "$1-$2");
+  }
+  e.target.value = valor;
+});
 
+function validarDadosEndereco() {
   const cep = document.getElementById('cep').value;
 
-  if(/^\d{8}$/.test(cep) == false){
-    alert("Preencha o campo CEP corretamente")
+  if(!/^\d{5}-\d{3}$/.test(cep)){
+    alert("Preencha o campo CEP corretamente");
     document.getElementById('cep').focus();
     return false;
   }
 
   const logradouro = document.getElementById('logradouro').value;
-
   if(logradouro == ""){
     alert("Preencha o campo Logradouro");
     document.getElementById('logradouro').focus();
@@ -70,7 +77,6 @@ function validarDadosEndereco() {
   }
 
   const numero = document.getElementById('numero').value;
-
   if(/^\d{1,5}$/.test(numero) == false){
     alert("Preencha o campo Número corretamente");
     document.getElementById('numero').focus();
@@ -78,15 +84,13 @@ function validarDadosEndereco() {
   }
 
   const complemento = document.getElementById('complemento').value;
-
-  if(/^[A-Za-z]+$/.test(complemento) == false){
+  if(complemento && /^[A-Za-z0-9\s-]+$/.test(complemento) == false){
     alert("Preencha o campo Complemento corretamente");
     document.getElementById('complemento').focus();
     return false;
   }
 
   const cidade = document.getElementById('cidade').value;
-
   if(/^[A-Za-zÀ-ÿ]+([ ][A-Za-zÀ-ÿ]+)*$/.test(cidade) == false){
     alert("Preencha o campo Cidade corretamente");
     document.getElementById('cidade').focus();
@@ -94,12 +98,11 @@ function validarDadosEndereco() {
   }
 
   const estado = document.getElementById('estado').value;
-
   if(/^[A-Za-zÀ-ÿ]+([ ][A-Za-zÀ-ÿ]+)*$/.test(estado) == false){
     alert("Preencha o campo Estado corretamente");
     document.getElementById('estado').focus();
     return false;
   }
 
-  return true
+  return true;
 }
