@@ -107,3 +107,27 @@
   transition: 0.3s;
   background-color: #BD2130;
 }
+
+.div-exemplo-apenas-numeros {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-exemplo-apenas-numeros {
+  height: 80%;
+  width: 80%;
+}
+
+.div-exemplo-formatar-telefone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-exemplo-formatar-telefone {
+  height: 180px;
+  width: 100%;
+}
