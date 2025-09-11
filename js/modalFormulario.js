@@ -172,7 +172,7 @@ function validarCPF() {
 }
 
 function validarEmail() {
-  if (!emailregex.test(email.value)) {
+  if (!emailregex.test(email.value) || /@.*@/.test(email.value)) {
     alert('Email inválido. Use o formato correto (ex: exemplo@exemplo.com).');
     email.focus();
     return false;
@@ -183,7 +183,7 @@ function validarEmail() {
 
 telefone.addEventListener('input', function(e) {
   let valor = e.target.value.replace(/\D/g, ''); 
-  
+
   if (valor.length > 0) {
       valor = valor.replace(/^(\d{2})(\d)/, '($1) $2'); 
   }
