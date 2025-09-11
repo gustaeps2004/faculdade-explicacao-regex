@@ -86,7 +86,7 @@ function validarTelefone() {
 function validarNascimento() {
   if (!nascimentoRegex.test(dtnascimento.value)) {
     alert('Data de Nascimento inválida. Use o formato correto (ex: 99/99/9999).');
-    nascimento.focus();
+    dtnascimento.focus();
     return false;
   } else {
     return true;
