@@ -182,19 +182,17 @@ function validarEmail() {
 }
 
 telefone.addEventListener('input', function(e) {
-  let valor = e.target.value.replace(/\D/g, ''); // Só números
-
+  let valor = e.target.value.replace(/\D/g, ''); 
+  
   if (valor.length > 0) {
-      valor = valor.replace(/^(\d{2})(\d)/, '($1) $2'); // DDD
+      valor = valor.replace(/^(\d{2})(\d)/, '($1) $2'); 
   }
   if (valor.length > 6) {
-      valor = valor.replace(/(\d{5})(\d{4})$/, '$1-$2'); // xxxxx-xxxx
+      valor = valor.replace(/(\d{5})(\d{4})$/, '$1-$2');
   }
 
-  e.target.value = valor.substring(0, 15); // Limita ao tamanho (xx) xxxxx-xxxx
+  e.target.value = valor.substring(0, 15); 
 });
-
-
 
 function validarTelefone() {
   if (!foneRegex.test(telefone.value)) {
