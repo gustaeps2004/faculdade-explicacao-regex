@@ -47,9 +47,7 @@ nextBtns.forEach(btn => {
     let podeAvancar = true; 
 
     if (currentStep === 0) { 
-      if (!validarNome()) { podeAvancar = false; }
-      if (!validarCPF()) { podeAvancar = false; }
-      if (!validarNascimento()) { podeAvancar = false; }
+      if (!validarNome() || !validarCPF() || !validarNascimento()) { podeAvancar = false; }
     } 
     else if (currentStep === 1) { 
       if (!validarEmail()) { podeAvancar = false; }
