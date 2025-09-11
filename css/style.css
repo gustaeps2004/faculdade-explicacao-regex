@@ -4,10 +4,73 @@ body {
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #38b6ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== header: texto e logo sorvete ===== */
+header {
+  width: 100%;
+  background: #ff66c4;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 2px #38b6ff;
+  margin: 0;
+}
+
+.logo-header img {
+  width: 80px;
+  height: auto;
+}
+
+/* ===== main ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  position: relative;
+}
+
+/* ===== html, css e js logos ===== */
+.js-logo {
+  position: absolute;
+  left: 25%;
+  width: 70px;
+  top: 13%;
+}
+
+.css-logo {
+  position: absolute;
+  right: 22%;
+  width: 70px;
+  top: 24%;
+}
+
+.html-logo {
+  width: 70px;
 }
 
 #openModalForm {
@@ -37,9 +100,32 @@ html, body {
   box-shadow: 0 4px 10px #ff66c4;
 }
 
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
 button {
-  cursor: pointer;
-  color: #ffff;
-  border-radius: 10px;
+  padding: 12px 25px;
+  background-color: #ff66c4;
+  color: #fff;
+  border-radius: 25px;
   border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc4a99;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== rodapé ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ff66c4;
+  font-size: 14px;
+  line-height: 1.4;
 }
