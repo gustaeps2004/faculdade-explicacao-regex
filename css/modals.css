@@ -27,6 +27,7 @@
 .close-btn-explicacao {
   position: absolute;
   top: 15px;
+  color: black;
   right: 20px;
   font-size: 24px;
   cursor: pointer;
@@ -35,6 +36,7 @@
 .step,
 .step-explicacao {
   display: none;
+  color: black;
 }
 
 .step.active,
